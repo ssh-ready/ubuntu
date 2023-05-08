@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN DEBIAN_FRONTEN=noninteractive \
-  apt update
+  apt update \
   && apt install -y openssh-server openssl bash \
   && rm -rf /var/lib/apt/lists/*
   
