@@ -1,6 +1,6 @@
 FROM ubuntu:latest
-RUN apt update \
-  && apt install -y openssh-server openssl bash \
+RUN apt-get update \
+  && apt-get install -y openssh-server openssl \
   && rm -rf /var/lib/apt/lists/*
  
 RUN eval $(grep '^ID=' /etc/os-release)
