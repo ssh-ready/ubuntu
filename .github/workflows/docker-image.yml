@@ -19,4 +19,4 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --tag ghcr.io/ssh-ready/ubuntu:latest
-        docker push gchr.io/ssh-ready/ubuntu:latest
+        docker push ghcr.io/ssh-ready/ubuntu:latest
