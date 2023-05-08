@@ -10,7 +10,7 @@ You can make your own SSH image by forking any of our images, and get in touch w
 # How to install ?
 Only one command is required to launch your SSH-Ready image of Ubuntu.
 ```sh
-docker run -d -p 2022:22 docker.pkg.github.com/ssh-ready/ubuntu:latest
+docker run -d -p 2022:22 ghcr.io/ssh-ready/ubuntu:latest
 ```
 
 # How to connect to SSH.
