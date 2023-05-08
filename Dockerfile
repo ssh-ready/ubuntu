@@ -6,5 +6,5 @@ RUN DEBIAN_FRONTEN=noninteractive \
   
 RUN sed 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' -i /etc/ssh/sshd_config
 RUN usermod --password $(echo ssh-ubuntu | openssl passwd -1 -stdin) root
-RUN echo "root:ssh-ubuntu are the credentials to log in."
-CMD ["/bin/bash"]
+RUN service ssh start
+CMD ["/usr/sbin/sshd", "-D"]
