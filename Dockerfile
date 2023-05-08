@@ -5,6 +5,8 @@ RUN apt update \
  
 RUN eval $(grep '^ID=' /etc/os-release)
 RUN sed 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' -i /etc/ssh/sshd_config
+RUN sed 's/PubkeyAuthentication yes/#PubkeyAuthentication yes/g' -i /etc/ssh/sshd_config
+RUN sed 's/#PasswordAuthentication yes/PasswordAuthentication yes/g' -i /etc/ssh/sshd_config
 RUN usermod --password $(echo $ID | openssl passwd -1 -stdin) root
 RUN service ssh start
 CMD ["/usr/sbin/sshd", "-D"]
