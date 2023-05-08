@@ -3,6 +3,8 @@
 At SSH-Ready, our mission is to provide you SSH ready images for Docker containers.
 You can make your own SSH image by forking any of our images, and get in touch with us to contribute!
 
+![Docker Logo](https://avatars.githubusercontent.com/u/132925070?s=200 "Docker Logo")
+
 # How to install ?
 Only one command is required to launch your SSH-Ready image of Ubuntu.
 `docker run -d -p 2022:22 ssh-ready/ubuntu:latest`
@@ -17,9 +19,9 @@ Note
 ----
 
 The image doesn't expose other ports like `80`, `443`...
+
 You'll need to add it to your `docker run` command, like this :
 `docker run -d -p 2022:22 -p 8080:80 ssh-ready/ubuntu:latest`
 *(example for Apache running on port 80)*
 
-If you find an issue, please report it on the
-[issue tracker](https://github.com/ssh-ready/ubuntu/issues/new/choose).
+If you find an issue, please report it on the [issue tracker](https://github.com/ssh-ready/ubuntu/issues/new/choose).
