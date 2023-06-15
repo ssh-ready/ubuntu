@@ -8,4 +8,5 @@ RUN sed 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' -i /etc/ssh
 RUN sed 's/#PubkeyAuthentication yes/PubkeyAuthentication no/g' -i /etc/ssh/sshd_config
 RUN sed 's/#PasswordAuthentication yes/PasswordAuthentication yes/g' -i /etc/ssh/sshd_config
 RUN usermod --password $(echo $ID | openssl passwd -1 -stdin) root
+RUN mkdir /run/sshd
 CMD ["/usr/sbin/sshd", "-De"]
